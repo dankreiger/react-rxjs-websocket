@@ -34,11 +34,15 @@ const App: React.FC = () => {
             })
           }
         >
-          I want to buy a car
+          send message to websocket server
         </button>
-        Lead Count: {leadCount}
+        {leadCount}
       </div>
-      <div>{todosList}</div>
+      <ul>
+        {todosList.map((item) => (
+          <li key={item.title}>{item.title}</li>
+        ))}
+      </ul>
     </div>
   );
 };

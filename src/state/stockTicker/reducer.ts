@@ -1,7 +1,7 @@
 import { AnyAction } from 'redux';
 import { notificationTypes } from './epics';
 
-export default (
+const reducer = (
   state = { connected: false, leadsCount: 0 },
   action: AnyAction
 ) => {
@@ -9,19 +9,21 @@ export default (
     case notificationTypes.WEBSOCKET_CONNECTED:
       return {
         ...state,
-        connected: true
+        connected: true,
       };
     case notificationTypes.WEBSOCKET_DISCONNECT:
       return {
         ...state,
-        connected: false
+        connected: false,
       };
     case notificationTypes.WEBSOCKET_MESSAGE_RECEIVED:
       return {
         ...state,
-        leadsCount: state.leadsCount + 1
+        leadsCount: state.leadsCount + 1,
       };
     default:
       return state;
   }
 };
+
+export default reducer;
