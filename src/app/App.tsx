@@ -7,18 +7,17 @@ import { notificationTypes } from '../state/stockTicker/epics';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
-  const leadCount = useSelector(state => state as IAppState).ticker.leadsCount;
-  const todosList: ITodo[] = useSelector(
-    state => (state as IAppState).todos.list
-  );
+  const leadCount = useSelector((state) => state as IAppState).ticker
+    .leadsCount;
+
   useEffect(() => {
     dispatch(fetchTodosBegin());
     dispatch({
-      type: notificationTypes.WEBSOCKET_TRY_CONNECT
+      type: notificationTypes.WEBSOCKET_TRY_CONNECT,
     });
     return () => {
       dispatch({
-        type: notificationTypes.WEBSOCKET_DISCONNECT
+        type: notificationTypes.WEBSOCKET_DISCONNECT,
       });
     };
   }, [dispatch]);
@@ -28,7 +27,8 @@ const App: React.FC = () => {
         <button
           onClick={() =>
             dispatch({
-              type: 'INCREMENT_LEADS'
+              type: 'INCREMENT_LEADS',
+              message: 'woofing in a websocket',
             })
           }
         >
