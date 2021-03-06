@@ -9,7 +9,9 @@ const App: React.FC = () => {
   const dispatch = useDispatch();
   const leadCount = useSelector((state) => state as IAppState).ticker
     .leadsCount;
-
+  const todosList: ITodo[] = useSelector(
+    (state) => (state as IAppState).todos.list
+  );
   useEffect(() => {
     dispatch(fetchTodosBegin());
     dispatch({
@@ -36,6 +38,7 @@ const App: React.FC = () => {
         </button>
         Lead Count: {leadCount}
       </div>
+      <div>{todosList}</div>
     </div>
   );
 };
