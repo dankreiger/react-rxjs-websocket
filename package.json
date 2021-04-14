@@ -14,7 +14,7 @@
     "redux-thunk": "2.3.0",
     "rxjs": "6.6.6",
     "typescript": "4.2.3",
-    "websocket": "1.0.33"
+    "websocket": "1.0.34"
   },
   "scripts": {
     "dev": "concurrently --kill-others-on-fail \"node server.js\" \"yarn start\"",
