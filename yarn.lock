@@ -2012,10 +2012,10 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-"@types/redux-immutable-state-invariant@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@types/redux-immutable-state-invariant/-/redux-immutable-state-invariant-2.1.1.tgz#8231007e9f370d2f5eb28b71c6a4d4b141973338"
-  integrity sha512-eosvcaKraeX8fyEKViFZ2vh3xSWF8teCSw+mEMjlwoN0Ai6ZAevczQr3YyZxZFfwH1LXUiV3aXcSAlsNKAnjNg==
+"@types/redux-immutable-state-invariant@2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@types/redux-immutable-state-invariant/-/redux-immutable-state-invariant-2.1.4.tgz#5b447f6c532687fbb6d103e58e52ef7dc08f0e23"
+  integrity sha512-xwVFZyZ9YTvMXa+najCAk/MKCA5N+kh/FumCn2qYIL7GoVkWxvmiaFQmADnxRriVhmQsC+mxou10rOrx7vy8JA==
   dependencies:
     redux "^3.6.0 || ^4.0.0"
 
